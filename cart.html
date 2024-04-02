@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- cdn link of bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- cdn link of fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- google font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Ecommerce Website By Shankar Poudel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar sections starts here -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <span class="first">P</span> <span class="first">S</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <a class="navbar-brand" href="/index.html">
+                        <span class="first">P</span> <span class="first">S</span>
+                    </a>
+
+                    <ul class="navbar-nav hstack g-4 ">
+                        <li class="nav-item me-4">
+                            <a class="nav-link " href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="/products.html">Products</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="/contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item me-4 cart">
+                            <a class="nav-link active" aria-current="page" href="/cart.html"><ruby><i class="fa-solid fa-cart-shopping"></i>
+                            <rt class="fs-6 fw-bolder"></rt></ruby></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar section ends here -->
+        <!-- Main section stsrts here -->
+        <div class="row g-4  mt-2 d-flex justify-content-evenly" id="productcontainerii">
+            <template id="producttemplateii">
+            <div id="cardnumber">
+                <div class="liststartshere">
+                    <section class="col-lg-2 d-none d-sm-block col-md-2">
+                        <span class=" w-50 p-1  text-center " id="category">
+                        </span>
+                    </section>
+                    <section class="col-lg-2 d-none d-sm-block col-md-2 ">
+                        <img src="\images\Laptop.png" class="card-img-top image " alt="latoppng"></section>
+                    <section class=" col-lg-2 col-md-2 col-sm-4">
+                        <h6 class="card-title productname "></h6>
+                    </section>
+                    <section class="col-lg-2 col-md-2 col-sm-3">
+                        <span id="current-Price"></span>
+                    </section>
+                    <section class="col-lg-2 col-md-2 col-sm-3">
+                        <div class="operations d-flex justify-content-evenly gap-3 ">
+                            <button class="btn increasement">+</button>
+                            <span class="total-quantity"></span>
+                            <button class="btn decreasement">-</button>
+                        </div>
+                    </section>
+                    <section class="col-lg-2 col-md-2 col-sm-2">
+                        <button class="btn decreasement removebtn">Remove</button>
+                </div>
+                <hr>
+            </div>
+            
+            </template>
+
+        </div>
+        <section class="productCartTotalElem">
+            <div class="productCartTotalElement">
+
+                <div class="productOrderTotal">
+                    <div>
+                        <p class="fw-bold">Sub Total:</p>
+                        <p class="productSubTotal"></p>
+                    </div>
+                    <div>
+                        <p class="fw-bold">Tax:</p>
+                        <p class="productTax">+ $ 18</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <p class="fw-bold">Total Price:</p>
+                        <p class="productFinalTotal"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main section ends here -->
+
+
+        <!-- Footer begins here -->
+        <div class="footerhere">
+        </div>
+        <!-- Footer ends here -->
+    </div>
+    </div>
+    <script type="module" src="/footer.js"></script>
+    <script type="module" src="/addtocart.js"></script>
+
+
+    <!-- cdn linnk of bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
